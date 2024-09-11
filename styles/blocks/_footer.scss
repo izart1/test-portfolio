@@ -1,0 +1,109 @@
+.footer {
+  padding: 60px;
+  @include mobile {
+    padding-inline: 0;
+  }
+
+  &__inner {
+    
+ 
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+      padding: 50px var(--container-padding-x) 30px;
+    }
+  }
+
+  &__body {
+    display: flex;  
+    column-gap: 50px;
+
+    @include mobile-above {
+      &:not(:last-child) {
+        margin-bottom: 42px;
+        padding-bottom: 42px;
+        border-bottom:2px solid rgba(102, 102, 102, 0.3);
+         
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: inherit;
+    }  
+    
+  }
+
+  &__contacts {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 50px;
+    margin-left: auto;  
+
+    @include tablet {
+      column-gap: 20px;
+    }
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      color: var(--color-dark);
+    }
+
+    &-body {
+      font-style: normal;         
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 37px;
+    } 
+
+    &:not(:last-child) {
+      margin-bottom: 66px;
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+      @include mobile {
+        flex-direction: column;
+        row-gap: 15px;
+      }
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }  
+
+  &__copyright {
+    text-align: center;
+  }
+}

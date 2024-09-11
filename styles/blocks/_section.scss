@@ -1,0 +1,48 @@
+.section {
+  padding-block: var(--section-padding-y);
+  display: flex;
+  flex-direction: column;
+  row-gap: 140px;
+
+  @include tablet {
+    row-gap: 80px;
+  }
+
+  @include mobile {
+    row-gap: 50px;
+  }
+  
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 49px;
+    
+    @include tablet {
+      row-gap: 25px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54%;
+    text-align: center;
+
+    @include mobile {
+      font-size: 40px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 81%;
+    text-align: center;
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+}

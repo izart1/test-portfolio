@@ -1,0 +1,65 @@
+ .hero {   
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  flex-direction: column;
+ 
+
+  @include mobile {
+    padding-top: 50px;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;  
+
+    @include mobile {
+      flex-direction: column;
+   
+    }
+  }
+
+  &__body {    
+    display: flex;      
+    width: 600px;
+    flex-direction: column;    
+    row-gap: 35px; 
+
+    @include mobile {
+      text-align: start;
+      align-items: center;
+      row-gap: 25px; 
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__description {     
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.21;
+    letter-spacing: -0.02em;
+
+    @include tablet {
+      font-size: 48px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+    }
+  }
+
+  &__image {
+    @include tablet {
+      max-width: 40%;
+      height: auto;
+    }   
+
+    @include mobile {
+      max-width: 100%;
+      width: 50%;
+    }   
+  }
+ }

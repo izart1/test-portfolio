@@ -1,0 +1,97 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%; 
+
+  &__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 400px;  
+    justify-content: start;
+  }
+
+  &__card {
+    display: flex;
+    width: 110px;
+    align-items: end;
+    border-radius: 10px;
+    background-position: center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 15px;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow:  0px 10px 30px -5px rgba(0, 0, 0, 0.5);
+
+    &[for="c1"] {
+      background-image: url("../../images/achievements/1.jpg");
+    }
+    &[for="c2"] {
+      background-image: url("../../images/achievements/2.jpeg");
+    }
+    &[for="c3"] {
+      background-image: url("../../images/achievements/3.jpg");
+    }
+    &[for="c4"] {
+      background-image: url("../../images/achievements/4.jpg");
+    }
+  }
+
+
+
+  &__content {
+    color: var(--color-light);
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    background: var(--color-dark);
+    color: var(--color-light);
+    border-radius: 50%;
+    width: 50px;
+
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+  }
+
+  &__title {  
+    text-transform: uppercase;
+  }
+
+  &__description {
+    padding-top: 5px;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .slider__card { 
+      width: 600px;
+    }
+
+    &:checked + .slider__card .slider__body {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  }
+
+
+}
